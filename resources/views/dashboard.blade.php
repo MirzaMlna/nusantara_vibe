@@ -4,13 +4,69 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
-
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
-                </div>
+            <!-- Horizontal Scroll Container -->
+            <div class="flex overflow-x-auto space-x-4">
+
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Clothes'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Clothes'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Clothes'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Clothes'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Clothes'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Clothes'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Clothes'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Clothes'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Clothes'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Clothes'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Clothes'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Clothes'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+
+            </div>
+        </div>
+    </div>
+    <div class="py-6">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <!-- Horizontal Scroll Container -->
+            <div class="flex overflow-x-auto space-x-4">
+
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Fabric'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Fabric'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Fabric'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Fabric'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Fabric'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Fabric'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Fabric'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Fabric'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Fabric'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Fabric'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Fabric'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+                <x-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Fabric'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
+                    :productPrice="250000" :productStock="10" />
+
             </div>
         </div>
     </div>
