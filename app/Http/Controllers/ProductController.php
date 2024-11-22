@@ -9,8 +9,8 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::all();  // Pastikan modelnya sesuai, misalnya Product
-        return view('products.index', compact('products'));
+        $products = Product::all();
+        return view('products.index', compact(var_name: 'products'));
     }
 
     public function create()
@@ -32,16 +32,9 @@ class ProductController extends Controller
             'description' => 'nullable|string',  // Tambahkan validasi untuk description jika diperlukan
         ]);
 
-        // Menetapkan nilai 'is_active' berdasarkan stok
-        $isActive = $request->stock > 2 ? true : false;
+        $isActive = $request->stock >= 2 ? true : false;
 
-        // Generate ID kustom (misalnya PRD0001)
-        $latestProduct = Product::latest()->first();
-        $newId = 'PRD' . str_pad((int)substr($latestProduct->id, 3) + 1, 4, '0', STR_PAD_LEFT);
-
-        // Menyimpan produk ke database
         Product::create([
-            'id' => $newId,
             'name' => $request->name,
             'price' => $request->price,
             'stock' => $request->stock,

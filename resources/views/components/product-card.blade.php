@@ -1,21 +1,15 @@
 <div class="min-w-[350px] max-w-[350px] h-auto rounded overflow-hidden shadow-lg bg-white dark:bg-gray-800 mb-5">
-    <img class="w-full h-64 object-cover" src=" {{ $productImage }} " alt="Product Image">
+    <img class="w-full h-64 object-cover" src=" {{ $image }} " alt="Product Image">
     <div class="px-6 py-4">
-        <p class="flex items-center justify-start text-white">
-            <span
-                class="{{ $productType == 'Clothes' ? 'text-orange-400' : ($productType == 'Fabric' ? 'text-yellow-300' : '') }}">
-                {{ $productType }}
-            </span>
-        </p>
 
-        <div class="font-bold text-xl mb-2 text-gray-800 dark:text-white">{{ $productName }}</div>
+        <div class="font-bold text-xl mb-2 text-gray-800 dark:text-white">{{ $name }}</div>
         <p class="text-gray-700 text-base dark:text-gray-300">
-            {{ $productInfo }}
+            {{ $description }}
         </p>
 
         <div class="flex items-center justify-between mt-4">
-            <span class="text-sm text-gray-500">Stock: {{ $productStock }}</span>
-            <span class="text-lg font-semibold text-green-600">{{ number_format($productPrice, 0, ',', '.') }}
+            <span class="text-sm text-gray-500">Stock: {{ $stock }}</span>
+            <span class="text-lg font-semibold text-green-600">{{ number_format($price, 0, ',', '.') }}
                 IDR</span>
         </div>
     </div>
