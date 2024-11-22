@@ -19,16 +19,17 @@
         <form action="{{ route('products.store') }}" method="POST" class="bg-white p-6 rounded-lg shadow-lg">
             @csrf
             <div class="space-y-4">
+
                 <!-- Product Name -->
                 <div>
-                    <label for="name" class="block text-sm font-medium text-gray-700">Product Name</label>
+                    <label required for="name" class="block text-sm font-medium text-gray-700">Product Name</label>
                     <input type="text" id="name" name="name" value="{{ old('name') }}" required
                         class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
                 </div>
 
                 <!-- Price -->
                 <div>
-                    <label for="price" class="block text-sm font-medium text-gray-700">Price (IDR)</label>
+                    <label required for="price" class="block text-sm font-medium text-gray-700">Price (IDR)</label>
                     <input type="number" id="price" name="price" step="0.01" value="{{ old('price') }}"
                         required
                         class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
@@ -36,27 +37,22 @@
 
                 <!-- Stock -->
                 <div>
-                    <label for="stock" class="block text-sm font-medium text-gray-700">Stock</label>
+                    <label required for="stock" class="block text-sm font-medium text-gray-700">Stock</label>
                     <input type="number" id="stock" name="stock" value="{{ old('stock') }}" required
                         class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
                 </div>
 
                 <!-- Description -->
                 <div>
-                    <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
+                    <label required for="description"
+                        class="block text-sm font-medium text-gray-700">Description</label>
                     <textarea id="description" name="description"
                         class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">{{ old('description') }}</textarea>
                 </div>
 
-                <!-- Type URL -->
-                <div>
-                    <label for="type" class="block text-sm font-medium text-gray-700">Type</label>
-                    <input type="radio" id="type" name="type" value="{{ old('type') }}"
-                        class="mt-1 block px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-                </div>
                 <!-- Image URL -->
                 <div>
-                    <label for="image" class="block text-sm font-medium text-gray-700">Image URL</label>
+                    <label required for="image" class="block text-sm font-medium text-gray-700">Image URL</label>
                     <input type="text" id="image" name="image" value="{{ old('image') }}"
                         class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
                 </div>
@@ -66,19 +62,15 @@
                     <h3 class="text-lg font-medium text-gray-700">Dimensions</h3>
                     <div class="grid grid-cols-3 gap-4">
                         <div>
-                            <label for="length" class="block text-sm font-medium text-gray-700">Length (cm)</label>
-                            <input type="number" id="length" name="dimensions[length]" step="0.01"
-                                value="{{ old('dimensions.length') }}"
-                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
-                        </div>
-                        <div>
-                            <label for="width" class="block text-sm font-medium text-gray-700">Width (cm)</label>
+                            <label required for="width" class="block text-sm font-medium text-gray-700">Width
+                                (cm)</label>
                             <input type="number" id="width" name="dimensions[width]" step="0.01"
                                 value="{{ old('dimensions.width') }}"
                                 class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
                         </div>
                         <div>
-                            <label for="height" class="block text-sm font-medium text-gray-700">Height (cm)</label>
+                            <label required for="height" class="block text-sm font-medium text-gray-700">Height
+                                (cm)</label>
                             <input type="number" id="height" name="dimensions[height]" step="0.01"
                                 value="{{ old('dimensions.height') }}"
                                 class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
