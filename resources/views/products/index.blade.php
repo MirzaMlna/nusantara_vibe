@@ -6,24 +6,16 @@
     </x-slot>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <!-- Horizontal Scroll Container -->
-            <div class="flex overflow-x-auto space-x-4">
+            <div class="flex justify-end mb-5">
+                <button class="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600 text-sm">Add Data</button>
+            </div>
+            <x-product-table>
 
-                <x-admin-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Clothes'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
-                    :productPrice="250000" :productStock="10" />
+            </x-product-table>
+            <div class="overflow-x-auto">
 
             </div>
-        </div>
-    </div>
-    <div class="py-6">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <!-- Horizontal Scroll Container -->
-            <div class="flex overflow-x-auto space-x-4">
 
-                <x-admin-product-card :productImage="'https://via.placeholder.com/540x540'" :productName="'Nama Produk'" :productType="'Fabric'" :productInfo="'Deskripsi singkat produk yang menggambarkan fitur utama produk.'"
-                    :productPrice="250000" :productStock="10" />
 
-            </div>
         </div>
-    </div>
 </x-app-layout>
