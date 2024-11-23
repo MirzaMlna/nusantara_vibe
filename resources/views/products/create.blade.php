@@ -78,6 +78,15 @@
                     </div>
                 </div>
 
+                <!-- Featured Item -->
+                <div class="space-y-4">
+                    <select name="is_featured" id="is_featured"
+                        class="border border-indigo-500 rounded-md focus:ring focus:ring-indigo-300 focus:ring-opacity-50">
+                        <option value="0" {{ old('is_featured') === '0' ? 'selected' : '' }}>Non Featured</option>
+                        <option value="1" {{ old('is_featured') === '1' ? 'selected' : '' }}>Featured</option>
+                    </select>
+                </div>
+
                 <!-- Submit Button -->
                 <div class="flex justify-end">
                     <button type="submit"

@@ -22,28 +22,30 @@ class ProductController extends Controller
     {
         // Validasi input
         $request->validate([
+            'image' => 'required|string',
             'name' => 'required|string|max:255',
+            'description' => 'required|string',
             'price' => 'required|numeric|min:0',
             'stock' => 'required|integer|min:0',
             'dimensions' => 'required|array',
             'dimensions.width' => 'required|numeric',
             'dimensions.height' => 'required|numeric',
-            'image' => 'required|string',
-            'description' => 'nullable|string',  // Tambahkan validasi untuk description jika diperlukan
+            'is_featured' => 'required|boolean',
         ]);
 
-        $isActive = $request->stock >= 2 ? true : false;
+        $is_active = $request->stock >= 2 ? true : false;
 
         Product::create([
+            'image' => $request->image,
             'name' => $request->name,
+            'description' => $request->description,
             'price' => $request->price,
             'stock' => $request->stock,
-            'dimensions' => $request->dimensions,  // Menyimpan dalam bentuk JSON
-            'is_active' => $isActive,
-            'image' => $request->image,
-            'description' => $request->description,  // Menyimpan deskripsi jika ada
+            'dimensions' => $request->dimensions,
+            'is_active' => $is_active,
+            'is_featured' => $request->is_featured,
         ]);
-
+        // dd($request->all());
         return redirect()->route('products.index')->with('success', 'Product created successfully.');
     }
 
@@ -56,14 +58,15 @@ class ProductController extends Controller
     {
         // Validasi input
         $request->validate([
+            'image' => 'required|string',
             'name' => 'required|string|max:255',
+            'description' => 'required|string',
             'price' => 'required|numeric|min:0',
             'stock' => 'required|integer|min:0',
             'dimensions' => 'required|array',
             'dimensions.width' => 'required|numeric',
             'dimensions.height' => 'required|numeric',
-            'image' => 'required|string',
-            'description' => 'nullable|string',
+            'is_featured' => 'required|boolean',
         ]);
 
         // Menetapkan nilai 'is_active' berdasarkan stok
@@ -71,13 +74,13 @@ class ProductController extends Controller
 
         // Update produk dengan data baru
         $product->update([
+            'image' => $request->image,
             'name' => $request->name,
+            'description' => $request->description,
             'price' => $request->price,
             'stock' => $request->stock,
-            'dimensions' => $request->dimensions,  // Menyimpan dalam bentuk JSON
-            'is_active' => $isActive,
-            'image' => $request->image,
-            'description' => $request->description,  // Menyimpan deskripsi jika ada
+            'dimensions' => $request->dimensions,
+            'is_featured' => $request->is_featured,
         ]);
 
         return redirect()->route('products.index')->with('success', 'Product updated successfully.');
