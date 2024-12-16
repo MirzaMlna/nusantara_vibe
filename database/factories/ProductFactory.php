@@ -22,10 +22,6 @@ class ProductFactory extends Factory
             'stock' => $this->faker->numberBetween(10, 100),
             'description' => $this->faker->sentence(nbWords: 30),
             'image' => 'https://btbatiktrusmi.com/wp-content/uploads/2023/06/batik1.webp',
-            'dimensions' => json_encode([
-                'width' => $this->faker->numberBetween(10, 100),
-                'height' => $this->faker->numberBetween(10, 100),
-            ]),
             'is_featured' => $this->faker->boolean(),
         ];
     }

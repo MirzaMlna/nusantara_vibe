@@ -22,7 +22,6 @@ class ProductsTableSeeder extends Seeder
                 'stock' => 50,
                 'description' => 'Description for product 1.',
                 'image' => 'https://via.placeholder.com/540',
-                'dimensions' => json_encode(['width' => 50, 'height' => 30]),
                 'is_featured' => 1, // 1 for featured
             ],
             [
@@ -31,7 +30,6 @@ class ProductsTableSeeder extends Seeder
                 'stock' => 30,
                 'description' => 'Description for product 2.',
                 'image' => 'https://via.placeholder.com/540',
-                'dimensions' => json_encode(['width' => 60, 'height' => 40]),
                 'is_featured' => 0, // 0 for not featured
             ],
             [
@@ -40,7 +38,6 @@ class ProductsTableSeeder extends Seeder
                 'stock' => 20,
                 'description' => 'Description for product 3.',
                 'image' => 'https://via.placeholder.com/540',
-                'dimensions' => json_encode(['width' => 70, 'height' => 50]),
                 'is_featured' => 1, // 1 for featured
             ],
             // Add more products as needed

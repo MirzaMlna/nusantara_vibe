@@ -22,9 +22,6 @@
                 </td>
                 <td class="py-3 px-4">{{ $product->stock }}</td>
                 <td class="py-3 px-4">{{ number_format($product->price, 0, ',', '.') }} IDR</td>
-                <td class="py-3 px-4">
-                    <span>{{ $product->dimensions['width'] }} x {{ $product->dimensions['height'] }}</span>
-                </td>
                 <td class="py-3 px-4 flex justify-center gap-2">
                     <!-- Detail Button -->
                     <a href="{{ route('products.show', $product->id) }}"

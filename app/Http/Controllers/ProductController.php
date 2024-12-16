@@ -27,9 +27,6 @@ class ProductController extends Controller
             'description' => 'required|string',
             'price' => 'required|numeric|min:0',
             'stock' => 'required|integer|min:0',
-            'dimensions' => 'required|array',
-            'dimensions.width' => 'required|numeric',
-            'dimensions.height' => 'required|numeric',
             'is_featured' => 'required|boolean',
         ]);
 
@@ -41,7 +38,6 @@ class ProductController extends Controller
             'description' => $request->description,
             'price' => $request->price,
             'stock' => $request->stock,
-            'dimensions' => $request->dimensions,
             'is_active' => $is_active,
             'is_featured' => $request->is_featured,
         ]);
@@ -63,9 +59,6 @@ class ProductController extends Controller
             'description' => 'required|string',
             'price' => 'required|numeric|min:0',
             'stock' => 'required|integer|min:0',
-            'dimensions' => 'required|array',
-            'dimensions.width' => 'required|numeric',
-            'dimensions.height' => 'required|numeric',
             'is_featured' => 'required|boolean',
         ]);
 
@@ -79,7 +72,6 @@ class ProductController extends Controller
             'description' => $request->description,
             'price' => $request->price,
             'stock' => $request->stock,
-            'dimensions' => $request->dimensions,
             'is_featured' => $request->is_featured,
         ]);
 
